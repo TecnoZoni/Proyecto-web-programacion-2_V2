@@ -1,0 +1,65 @@
+/*
+///////////////////////
+HERO 
+///////////////////////
+*/
+
+.hero {
+    height: 80vh;
+    width: 100%;
+}
+
+.hero_imagen {
+    background: linear-gradient(#edf7ff80, #0661ff80), url(./img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero_contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.icono_blanco {
+    position: absolute;
+    bottom: 0;
+    animation: levitar 2s ease infinite;
+}
+
+.nosotros-contenedores{
+    width: 50%;
+}
+
+.img_card{
+    height: 250px; 
+    object-fit: contain;
+}
+
+.link_login {
+    cursor: pointer;
+    color: #007bff;
+}
