@@ -63,3 +63,18 @@ HERO
     cursor: pointer;
     color: #007bff;
 }
+
+/*
+///////////////////////
+PRODUCTOS 
+///////////////////////
+*/
+.card_img_prod {
+    height: 250px;
+    object-fit: contain;
+}
+
+.img_carrusel {
+    height: 400px;
+    object-fit: contain;
+}
