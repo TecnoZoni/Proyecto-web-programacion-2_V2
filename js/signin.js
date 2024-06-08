@@ -1,18 +1,28 @@
-const formTitle = document.getElementById('form-title');
-const registerFields = document.querySelectorAll('#register-fields');
-const toggleLink = document.getElementById('toggle-link');
-const toggleText = document.getElementById('toggle-text');
 const authForm = document.getElementById('auth-form');
-const buttonForm = document.getElementById('button-form');
-
-//autenticación
 authForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-    if (password !== confirmPassword) {
-        alert('¡Las contraseñas no coinciden!');
-        return;
+    const name = document.getElementById('first-name').value
+    const lastName = document.getElementById('last-name').value
+    const email = document.getElementById('email').value
+    const password = document.getElementById('password').value
+    const confirmPassword = document.getElementById('confirm-password').value
+
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+
+    const userRegistrated = Users.find(user => user.email === email)
+
+    if (userRegistrated) {
+        return alert('El usuario ya esta registrado')
     }
-    alert('¡Registro exitoso!');
-});
+
+    if (password !== confirmPassword) {
+        return alert('Las constraseñas no coinciden')
+    }
+
+    Users.push({ name: name, lastName: lastName, email: email, password: password, cart: [] })
+    localStorage.setItem('users',JSON.stringify(Users))
+    alert('Registro Exitoso')
+
+    window.location.href = './login.html'
+
+})
