@@ -16,6 +16,7 @@ import handleVerMasClick from './handleVerMasClick.js';
     });
 })();
 
+//Funcion para cargar las cards de los primeros 4 productos
 function cargarMejoresProductos(contenedor) {
     for (let i = 0; i < 4; i++) {
         contenedor.innerHTML +=
@@ -33,11 +34,10 @@ function cargarMejoresProductos(contenedor) {
             `
     }
 }
-
 const mejoresProd = document.getElementById('mejoresProductos')
 cargarMejoresProductos(mejoresProd)
 
-
+//Funcion para agregar los eventos ver mas datos en las cards de los productos
 function addVerMasEventListeners() {
     const botonVerMas = document.getElementsByClassName('ver-mas');
 
@@ -45,5 +45,18 @@ function addVerMasEventListeners() {
         boton.addEventListener('click', handleVerMasClick);
     }
 }
-
 document.addEventListener('DOMContentLoaded', addVerMasEventListeners);
+
+//Usuario Iniciado?
+const user = JSON.parse(localStorage.getItem('login_succes')) || false
+if (!user) {
+    window.location.href = './login.html'
+}
+const botonLogin = document.getElementById('button-log')
+botonLogin.textContent = 'LogOut'
+
+botonLogin.addEventListener('click', () => {
+    alert('Muchas gracias por visitar Nitsuga Tech!')
+    localStorage.removeItem('login_succes')
+    window.location.href = './login.html'
+})

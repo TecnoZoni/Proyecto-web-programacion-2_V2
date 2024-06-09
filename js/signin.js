@@ -20,8 +20,8 @@ authForm.addEventListener('submit', (e) => {
     }
 
     Users.push({ name: name, lastName: lastName, email: email, password: password, cart: [] })
-    localStorage.setItem('users',JSON.stringify(Users))
-    alert('Registro Exitoso')
+    localStorage.setItem('users', JSON.stringify(Users))
+    alert('Registrado en Nitsuga Tech!!, Ya podes inicar sesion')
 
     window.location.href = './login.html'
 
