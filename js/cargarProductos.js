@@ -1,5 +1,6 @@
 import { productos } from "./productos.js";
-import handleVerMasClick from "./handleVerMasClick.js";
+import { handleVerMasClick } from "./handleVerMasClick.js";
+import { validarSesionUsuario } from "./validarSesion.js";
 
 function cargarTodosProductos(contenedor) {
     productos.forEach(producto => {
@@ -32,3 +33,5 @@ function addVerMasEventListeners() {
 }
 
 document.addEventListener('DOMContentLoaded', addVerMasEventListeners);
+
+validarSesionUsuario()

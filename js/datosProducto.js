@@ -1,4 +1,6 @@
 import { productos } from "./productos.js";
+import { agregarPeoducto } from "./agregarCarrito.js";
+import { validarSesionUsuario } from "./validarSesion.js";
 
 const idPorducto = sessionStorage.getItem('productoId')
 const contenedorDatosProdcutos = document.getElementById('contenedorDatosProducto')
@@ -48,8 +50,8 @@ productos.forEach(producto => {
                     <h3>${producto.nombre}</h3>
                     <p class="display-6">$${producto.precio}</p>
                     <div>
-                        <a href="../login.html" class="btn btn-primary">Comprar ahora</a>
-                        <a href="../login.html" class="btn btn-primary">Guardar en el carrito</a>
+                        <a class="btn btn-primary">Comprar ahora</a>
+                        <a class="btn btn-primary" id="boton_guardar">Guardar en el carrito</a>
                     </div>
                 </div>
             
@@ -89,3 +91,9 @@ productos.forEach(producto => {
         carcterisitcasComentarios.innerHTML += caracteristicasHTML;
     }
 });
+
+const botonGuardar = document.getElementById('boton_guardar')
+
+botonGuardar.addEventListener('click',agregarPeoducto(idPorducto))
+
+validarSesionUsuario()
