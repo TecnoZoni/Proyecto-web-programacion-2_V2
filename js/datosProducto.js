@@ -1,13 +1,13 @@
 import { productos } from "./productos.js";
-import { agregarPeoducto } from "./agregarCarrito.js";
+import { agregarProducto } from "./agregarCarrito.js";
 import { validarSesionUsuario } from "./validarSesion.js";
 
-const idPorducto = sessionStorage.getItem('productoId')
+const idProducto = sessionStorage.getItem('productoId')
 const contenedorDatosProdcutos = document.getElementById('contenedorDatosProducto')
 const carcterisitcasComentarios = document.getElementById('carcterisitcasComentarios')
 
 productos.forEach(producto => {
-    if (producto.id == idPorducto) {
+    if (producto.id == idProducto) {
         contenedorDatosProdcutos.innerHTML = "";
         carcterisitcasComentarios.innerHTML = "";
         contenedorDatosProdcutos.innerHTML +=
@@ -94,6 +94,8 @@ productos.forEach(producto => {
 
 const botonGuardar = document.getElementById('boton_guardar')
 
-botonGuardar.addEventListener('click',agregarPeoducto(idPorducto))
+botonGuardar.addEventListener('click', ()=> {
+    agregarProducto(idProducto);
+});
 
 validarSesionUsuario()

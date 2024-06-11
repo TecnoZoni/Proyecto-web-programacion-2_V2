@@ -22,7 +22,8 @@ export const productos = [
                 nombre: "Potencia",
                 tipo: "120 W"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto2",
@@ -54,7 +55,8 @@ export const productos = [
                 nombre: "Tamaño de la pantalla",
                 tipo: "1.92´´"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto3",
@@ -82,7 +84,8 @@ export const productos = [
                 nombre: "Voltaje",
                 tipo: "220V - 230V"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto4",
@@ -110,7 +113,8 @@ export const productos = [
                 nombre: "Con micrófono",
                 tipo: "Si"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto5",
@@ -146,7 +150,8 @@ export const productos = [
                 nombre: "Procesador",
                 tipo: "Ryzen 3250U"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto6",
@@ -178,7 +183,8 @@ export const productos = [
                 nombre: "Potencia",
                 tipo: "1500 W"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto7",
@@ -210,7 +216,8 @@ export const productos = [
                 nombre: "Potencia",
                 tipo: "500 W"
             }
-        ]
+        ],
+        cantidad: 0
     },
     {
         id: "producto8",
@@ -242,6 +249,7 @@ export const productos = [
                 nombre: "Tamaño de la pantalla",
                 tipo: "32´´"
             }
-        ]
+        ],
+        cantidad: 0
     }
 ]

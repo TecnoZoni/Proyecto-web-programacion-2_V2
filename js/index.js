@@ -1,6 +1,7 @@
 import { productos } from './productos.js';
 import { handleVerMasClick } from './handleVerMasClick.js';
 import { validarSesionUsuario } from './validarSesion.js';
+validarSesionUsuario()
 
 //Funcion necesaria para las validaciones del formulario en el index.html
 (function () {
@@ -47,5 +48,3 @@ function addVerMasEventListeners() {
     }
 }
 document.addEventListener('DOMContentLoaded', addVerMasEventListeners);
-
-validarSesionUsuario()
